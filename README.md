@@ -13,7 +13,7 @@ verify  manually https://localhost/dashboard
 install cypress framework 
 
  Run cypress 
- go to folder and run  
+ go to folder where your project  located and run  
                     npx cypress open
                     
                     
