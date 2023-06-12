@@ -1,0 +1,28 @@
+
+- name: Provision a VM on GCP
+  hosts: localhost
+  gather_facts: no
+  vars:
+    service_account_file: 
+    project_id: "rancherapiautomation-5011"
+
+  tasks:
+    - name: Create a new VM instance
+      ansible.builtin.gcp_compute_instance:
+        name: my-vm-instance
+        machine_type: n1-standard-1
+        zone: asia-south2
+        project: "{{ project_id }}"
+        auth_kind: serviceaccount
+        service_account_file: "{{ service_account_file }}"
+        disks:
+          - auto_delete: 'true'
+            boot: 'true'
+            source: projects/debian-cloud/global/images/family/debian-10
+        network_interfaces:
+          - network: global/networks/default
+      register: result
+
+    - name: Display the public IP of the new VM
+      debug:
+        var: result.instance.networkInterfaces[0].accessConfigs[0].natIP
