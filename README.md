@@ -13,7 +13,9 @@ verify  manually https://localhost:8080/dashboard
 install cypress framework 
 
 install go and configure on local laptop
-** Run cypress **
+
+
+**Run cypress**
  go to folder where your project  located and run  
                     npx cypress open
                     
