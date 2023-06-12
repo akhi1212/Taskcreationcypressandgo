@@ -1,6 +1,6 @@
 # Taskcreationcypressandgo
 
-Pre requisites 
+**Pre requisites** 
 
 ensure rancher desktop  setup  
 
@@ -25,6 +25,6 @@ from cypress gui  click e2e testing select browser & click e2e in <selected brow
 then select file WebUIRancher.cy.js file click that file , it will start execute 
 
  
- Run go file 
+ Run **go file** 
  
     go run mainloginapi_test.go
