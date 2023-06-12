@@ -8,7 +8,7 @@ ensure rancher desktop  setup
 run command 
 sudo docker run --privileged -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher
 
-verify  manually https://localhost/dashboard
+verify  manually https://localhost:8080/dashboard
 
 install cypress framework 
 
