@@ -19,3 +19,4 @@ install cypress framework
                     
 from cypress gui  click e2e testing select browser & click e2e in <selected browser>
   
+then select file WebUIRancher.cy.js file click that file , it will start execute 
